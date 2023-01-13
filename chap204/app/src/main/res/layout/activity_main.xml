@@ -90,6 +90,15 @@
         app:layout_constraintStart_toEndOf="@id/guideline"
         tools:text="0000-00-00" />
 
+    <ImageView
+        android:id="@+id/callImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="@id/phoneValueTextView"
+        app:layout_constraintEnd_toEndOf="@id/bloodValueTextView"
+        app:layout_constraintTop_toTopOf="@id/phoneValueTextView" />
+
     <TextView
         android:id="@+id/bloodValueTextView"
         style="@style/Value"
@@ -107,10 +116,10 @@
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="4dp"
         android:gravity="end"
         app:layout_constraintBaseline_toBaselineOf="@id/phoneTextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/callImageView"
         app:layout_constraintStart_toEndOf="@id/guideline"
         tools:text="000-0000-0000" />
 
@@ -127,17 +136,34 @@
         tools:text="주의사항" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:src="@drawable/ic_baseline_edit_24"
-        android:backgroundTint="@color/orange"
         android:id="@+id/goInputButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="36dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="정보입력" />
+        android:layout_margin="36dp"
+        android:backgroundTint="@color/orange"
+        android:contentDescription="정보입력"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:backgroundTint="@color/orange"
+        android:contentDescription="삭제"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/goInputButton" />
 
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/callLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="phoneValueTextView"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
