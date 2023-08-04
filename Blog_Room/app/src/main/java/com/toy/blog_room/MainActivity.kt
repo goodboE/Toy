@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initRecyclerView()
+        initViews()
     }
 
 
@@ -38,4 +39,9 @@ class MainActivity : AppCompatActivity() {
             addItemDecoration(decoration)
         }
     }
+
+    private fun initViews() {
+
+    }
+
 }
