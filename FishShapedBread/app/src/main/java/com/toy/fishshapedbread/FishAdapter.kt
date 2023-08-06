@@ -7,8 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.toy.fishshapedbread.databinding.ItemFishBinding
 
-class FishAdapter(private val fishList: MutableList<Fish>) :
-    RecyclerView.Adapter<FishAdapter.FishViewHolder>() {
+class FishAdapter(private val fishList: MutableList<Fish>) : RecyclerView.Adapter<FishAdapter.FishViewHolder>() {
 
     private var onCreateCount = 1
     private var onBindCount = 1
@@ -21,8 +20,7 @@ class FishAdapter(private val fishList: MutableList<Fish>) :
     }
 
     // 붕어빵 틀 정의 (설계도)=> 모양은 ItemFishBinding, bind 라는 기능을 가진 붕어빵 틀
-    class FishViewHolder(private val binding: ItemFishBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class FishViewHolder(private val binding: ItemFishBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(fish: Fish) {
             binding.readBeanRateTextView.text = "%d%%".format(fish.readBeanRate.toInt())
             binding.creamRateTextView.text = "%d%%".format(fish.creamRate.toInt())

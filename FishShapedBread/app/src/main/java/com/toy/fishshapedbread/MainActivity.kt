@@ -32,7 +32,16 @@ class MainActivity : AppCompatActivity() {
             Fish("8", "8", false),
             Fish("9", "9", false),
             Fish("10", "10", false),
-            Fish("99", "99", false),
+            Fish("11", "11", false),
+            Fish("12", "12", false),
+            Fish("13", "13", false),
+            Fish("14", "14", false),
+            Fish("15", "15", false),
+            Fish("16", "16", false),
+            Fish("17", "17", false),
+            Fish("18", "18", false),
+            Fish("19", "19", false),
+            Fish("20", "20", false),
         )
 
 
