@@ -73,8 +73,6 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-
-
             }
 
             override fun onFailure(call: Call<NewsRss>, t: Throwable) {
