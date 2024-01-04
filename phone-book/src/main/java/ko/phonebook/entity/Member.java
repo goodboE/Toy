@@ -17,4 +17,12 @@ public class Member {
     private Long id;
     private String name;
     private String phoneNumber;
+
+    public Member() {
+    }
+
+    public Member(String name, String phoneNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
 }
