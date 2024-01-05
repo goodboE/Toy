@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="14dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/memberImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/baseline_man_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/memberNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/memberImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="이름" />
+
+    <TextView
+        android:id="@+id/memberPhoneNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/memberImageView"
+        app:layout_constraintTop_toBottomOf="@id/memberNameTextView"
+        tools:text="010-1234-1234" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
