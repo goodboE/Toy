@@ -1,4 +1,4 @@
-package com.toy.phone_book_client
+package com.example.phone_book_client
 
 import org.junit.Test
 
