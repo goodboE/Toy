@@ -30,7 +30,7 @@ class MemberAdapter : ListAdapter<MemberDto, MemberAdapter.ViewHolder>(diffUtil)
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<MemberDto>() {
             override fun areItemsTheSame(oldItem: MemberDto, newItem: MemberDto): Boolean {
-                return oldItem.id == newItem.id
+                return oldItem === newItem
             }
 
             override fun areContentsTheSame(oldItem: MemberDto, newItem: MemberDto): Boolean {
