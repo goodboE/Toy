@@ -28,7 +28,6 @@ interface MemberService {
     ): Call<MemberDto>
 
     @DELETE("members/{id}")
-    fun deleteMember(@Path("id") id: Long): Call<MembersDto>
-
+    fun deleteMember(@Path("id") id: Long): Call<MemberDto>
 
 }
